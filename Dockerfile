@@ -20,4 +20,4 @@ EXPOSE 80
 HEALTHCHECK CMD curl --fail http://localhost:80/_stcore/health
 
 # Run app.py when the container launches
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=80"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=80", "server.address=0.0.0.0"]
