@@ -3,7 +3,7 @@ import streamlit as st
 import json
 import pandas as pd
 #from pprint import pprint
-    def main():
+def main():
     # Set page title and description using Markdown
     st.title("International Space Station Tracker")
     st.markdown("This app displays the current number of people in space and their names, along with the location of the ISS.")
@@ -49,5 +49,5 @@ import pandas as pd
 
 if __name__ == "__main__":
     main()
-    
+
 
