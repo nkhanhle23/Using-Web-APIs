@@ -14,10 +14,10 @@ RUN pip install -r requirements.txt
 COPY app/ /app
 
 # Make port 8501 available to the world outside this container
-EXPOSE 80
+EXPOSE 8502
 
 # Tells Docker how to test a Streamlit container to check that it is still working. 
-HEALTHCHECK CMD curl --fail http://localhost:80/_stcore/health
+HEALTHCHECK CMD curl --fail http://localhost:8502/_stcore/health
 
 # Run app.py when the container launches
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=80"]
+ENTRYPOINT ["streamlit", "run", "app.py"]
